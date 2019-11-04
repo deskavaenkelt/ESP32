@@ -36,7 +36,7 @@ void setup() {
   WiFi.begin(WIFI_NAME, WIFI_PASSWORD);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
-    Serial.print("Trying to connect to Wifi Network");
+    Serial.println("Trying to connect to Wifi Network");
   }
   Serial.println("");
   Serial.println("Successfully connected to WiFi network");
@@ -124,20 +124,21 @@ void loop(){
             client.println("<center><h2>Web Server Example Microcontrollerslab.com</h2></center>" );
             client.println("<center><h2>Press on button to turn LED on and off</h3></center>");
             client.println("<form><center>");
-            client.println("<p>BLUE LED (0)) is " + BLUE_LED_STATE + "</p>");
+
+            client.println("<p>BLUE LED(0) is " + BLUE_LED_STATE + "</p>");
             // If the PIN_NUMBER_22State is off, it displays the ON button      
              client.println("<center> <button class=\"button\" name=\"LED0\" value=\"ON\" type=\"submit\">Turn BLUE LED ON</button>") ;
              client.println("<button class=\"button\" name=\"LED0\" value=\"OFF\" type=\"submit\">Turn BLUE LED OFF</button><br><br>");
              
-             client.println("<p>RED LED (1) is " + RED_LED_STATE + "</p>");
+             client.println("<p>RED LED(1) is " + RED_LED_STATE + "</p>");
              client.println("<button class=\"button\" name=\"LED1\" value=\"ON\" type=\"submit\">Turn RED LED ON</button>");
              client.println("<button class=\"button\" name=\"LED1\" value=\"OFF\" type=\"submit\">Turn RED LED OFF</button> <br><br>");
              
-             client.println("<p>YELLOW LED (2) is " + YELLOW_LED_STATE + "</p>");
+             client.println("<p>YELLOW LED(2) is " + YELLOW_LED_STATE + "</p>");
              client.println ("<button class=\"button\" name=\"LED2\" value=\"ON\" type=\"submit\">Turn YELLOW LED ON</button>");
              client.println ("<button class=\"button\" name=\"LED2\" value=\"OFF\" type=\"submit\">Turn YELLOW LED OFF</button></center>");
 
-             client.println("<p>GREEN LED (3) is " + GREEN_LED_STATE + "</p>");
+             client.println("<p>GREEN LED(3) is " + GREEN_LED_STATE + "</p>");
              client.println ("<button class=\"button\" name=\"LED3\" value=\"ON\" type=\"submit\">Turn GREEN LED ON</button>");
              client.println ("<button class=\"button\" name=\"LED3\" value=\"OFF\" type=\"submit\">Turn GREEN LED OFF</button></center>");
 
