@@ -1,7 +1,7 @@
 #include <WiFi.h>
 
-const char* WIFI_NAME= "JL-25G";  
-const char* WIFI_PASSWORD = "1ar55t++";  
+const char* WIFI_NAME= "NETWORK_NAME";  
+const char* WIFI_PASSWORD = "PASSWORD";  
 WiFiServer server(80);
 
 String header;
