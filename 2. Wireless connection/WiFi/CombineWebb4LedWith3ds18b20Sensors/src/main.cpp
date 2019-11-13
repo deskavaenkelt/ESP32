@@ -29,8 +29,8 @@ float valueOfSensor0 = 0;
 float valueOfSensor1 = 0;
 float valueOfSensor2 = 0;
 
-const char *WIFI_NAME = "NETWORK";
-const char *WIFI_PASSWORD = "PASSWORD";
+const char *WIFI_NAME = "SSID";
+const char *WIFI_PASSWORD = "PASS";
 WiFiServer server(80);
 WiFiClient client;
 
@@ -146,37 +146,37 @@ void loop()
 
 						if (header.indexOf("LED0=ON") != -1)
 						{
-							Serial.println("GPIO23 LED is ON");
+							Serial.println("BLUE_LED is ON");
 							BLUE_LED_STATE = "on";
 							digitalWrite(BLUE_LED, HIGH);
 						}
 						if (header.indexOf("LED0=OFF") != -1)
 						{
-							Serial.println("GPIO23 LED is OFF");
+							Serial.println("BLUE_LED is OFF");
 							BLUE_LED_STATE = "off";
 							digitalWrite(BLUE_LED, LOW);
 						}
 						if (header.indexOf("LED1=ON") != -1)
 						{
-							Serial.println("GPIO23 LED is ON");
+							Serial.println("RED_LED is ON");
 							RED_LED_STATE = "on";
 							digitalWrite(RED_LED, HIGH);
 						}
 						if (header.indexOf("LED1=OFF") != -1)
 						{
-							Serial.println("GPIO23 LED is OFF");
+							Serial.println("RED_LED is OFF");
 							RED_LED_STATE = "off";
 							digitalWrite(RED_LED, LOW);
 						}
 						if (header.indexOf("LED2=ON") != -1)
 						{
-							Serial.println("GPIO15 LED is ON");
+							Serial.println("YELLOW_LED is ON");
 							YELLOW_LED_STATE = "on";
 							digitalWrite(YELLOW_LED, HIGH);
 						}
 						if (header.indexOf("LED2=OFF") != -1)
 						{
-							Serial.println("GPIO15 LED is OFF");
+							Serial.println("YELLOW_LED is OFF");
 							YELLOW_LED_STATE = "off";
 							digitalWrite(YELLOW_LED, LOW);
 						}
