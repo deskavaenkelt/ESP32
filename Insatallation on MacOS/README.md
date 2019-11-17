@@ -29,6 +29,13 @@
             </ul>
     </div>
     <div>
+            <h3>Install pip</h3>
+            <p>It's needed for Espressif's installer.</p>
+            <ul>
+                <li>In terminal: <code>sudo easy_install pip</code></li>
+            </ul>
+        </div>
+    <div>
         <h3>Install pip3</h3>
         <p>Download pip3 from <a href="https://pip.pypa.io/en/stable/installing/">Python.org</a></p>
         <ul>
